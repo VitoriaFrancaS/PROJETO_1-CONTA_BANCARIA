@@ -1,11 +1,10 @@
-package conta;
+package contaBancaria;
 
 import java.util.Scanner;
 
 public class menu {
 
 	public static void main(String[] args) {
-		
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
@@ -84,8 +83,8 @@ public class menu {
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
 		System.out.println("Projeto Desenvolvido por: ");
-		System.out.println("Generation Brasil - generation@generation.org");
-		System.out.println("github.com/conteudoGeneration");
+		System.out.println("Vitória França-vitoria.s.franca07@gmail.com e Generation Brasil - generation@generation.org");
+		System.out.println("https://github.com/VitoriaFrancaS github.com/conteudoGeneration");
 		System.out.println("*********************************************************");
 
 	}
