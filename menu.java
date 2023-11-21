@@ -2,24 +2,42 @@ package contaBancaria;
 
 import java.util.Scanner;
 
-import conta.util.Cores;
-
 import conta.model.conta;
+import conta.util.Cores;
+import conta.model.contaPoupanca;
+import conta.model.contaCorrente;
 
 public class menu {
 
 	public static void main(String[] args) {
-		
-				conta c1 = new conta(1, 123, 1, "Adriana", 10000.0f);
-				c1.visualizar();
-				c1.sacar(12000.0f);
-				c1.visualizar();
-				c1.depositar(5000.0f);
-				c1.visualizar();
 
 				Scanner leia = new Scanner(System.in);
 
 				int opcao;
+				
+				 
+				conta c11 = new conta(3, 123, 1, "Vitória", 500000.0f);
+				c11.visualizar();
+				c11.sacar(12000.0f);
+				c11.visualizar();
+				c11.depositar(5000.0f);
+				c11.visualizar();
+		        
+				
+				contaCorrente cc1 = new contaCorrente(1, 123, 1, "Claudio Roberto", 0.0f, 1000.0f);
+				cc1.visualizar();
+				cc1.sacar(12000.0f);
+				cc1.visualizar();
+				cc1.depositar(5000.0f);
+				cc1.visualizar();
+				
+		  
+				contaPoupanca cp1 = new contaPoupanca(2, 123, 2, "Careca Junior", 100000.0f, 15);
+				cp1.visualizar();
+		        cp1.sacar(1000.0f);
+				cp1.visualizar();
+				cp1.depositar(5000.0f);
+				cp1.visualizar();
 
 				while (true) {
 
