@@ -1,5 +1,6 @@
 package contaBancaria;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import conta.model.conta;
@@ -11,19 +12,15 @@ public class menu {
 
 	public static void main(String[] args) {
 
-				Scanner leia = new Scanner(System.in);
+				Scanner input = new Scanner(System.in);
 
 				int opcao;
 				
 				 
-				conta c11 = new conta(3, 123, 1, "Vitória", 500000.0f);
-				c11.visualizar();
-				c11.sacar(12000.0f);
-				c11.visualizar();
-				c11.depositar(5000.0f);
-				c11.visualizar();
-		        
 				
+		        
+				System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND);
+
 				contaCorrente cc1 = new contaCorrente(1, 123, 1, "Claudio Roberto", 0.0f, 1000.0f);
 				cc1.visualizar();
 				cc1.sacar(12000.0f);
@@ -38,6 +35,7 @@ public class menu {
 				cp1.visualizar();
 				cp1.depositar(5000.0f);
 				cp1.visualizar();
+				System.out.println("                                                 "+ Cores.TEXT_RESET);
 
 				while (true) {
 
@@ -61,13 +59,21 @@ public class menu {
 					System.out.println("*****************************************************");
 					System.out.println("Entre com a opção desejada:                          ");
 					System.out.println("                                                     " + Cores.TEXT_RESET);
+					
+					try {
+						opcao =input.nextInt();
+					}catch (InputMismatchException e){
+						System.out.println("\nDigite valores inteiros!");
+						input.nextLine();
+						opcao=0;
+					}
 
-					opcao = leia.nextInt();
+					opcao = input.nextInt();
 
 					if (opcao == 9) {
 						System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco Família 69 - O seu Futuro começa aqui!");
 		                  		sobre();
-						leia.close();
+						input.close();
 						System.exit(0);
 					}
 
